@@ -39,7 +39,7 @@ describe("3. About Objects", () => {
       mastermind: "James Wood",
       henchman: "Adam West",
       birthYear: 1970,
-      calculateAge: () => {
+      calculateAge: function() {
         return currentYear - this.birthYear;
       }
     };
@@ -87,15 +87,5 @@ describe("3. About Objects", () => {
     expect(myNewObject.prop1).toEqual("a property!");
     expect(myNewObject.prop2).toEqual([4,3,2]);
     expect(myNewObject.prop3()).toEqual("a property that is a method!");
-  });
-
-  it("should create your own prototype", () => {
-    function MyPrototype(argument) {
-      return FILL_ME_IN;
-    }
-    const myNewObject = new MyPrototype("initial value");
-
-    expect(myNewObject.prop1).toEqual({simple: "object"});
-    expect(myNewObject.prop2).toEqual("initial value");
   });
 });
